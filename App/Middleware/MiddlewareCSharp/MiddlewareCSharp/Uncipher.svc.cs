@@ -1,5 +1,6 @@
 ﻿using MiddlewareApp.Coordination;
 using System;
+using MiddlewareApp.Service;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -18,9 +19,19 @@ namespace MiddlewareCSharp
 
         public Message GetUncryptedInfo(Message msg)
         {
+            //Namespace Coordination courcicuité pour gagner du temps. A réagencer
+            if (!MiddlewareApp.Service.AuthentificationCheckService.CheckUserToken(msg.TokenUSer))
+            {
+                msg.StatusOp = false;
+                return msg;
+            } 
+
             LaunchUncrypt LU = new LaunchUncrypt();
 
             string[] validFile = LU.StartUncryptWork(msg.TokenUSer , msg.OperationName, msg.Data.ToList());
+
+            //callback plutot, à faire -- Envoie l'e-mail de validation
+            LU.SendMail(msg.TokenUSer);
 
             Message response = new Message();
             response.OperationName = msg.OperationName;

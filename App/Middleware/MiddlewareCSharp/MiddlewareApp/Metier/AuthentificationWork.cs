@@ -22,7 +22,9 @@ namespace MiddlewareApp.Metier
                 //Vérification du login et mot de passe
                 if(AC.GetUser(login, pwd))
                 {
-                    return GenerateUserToken(login, pwd);
+                    var usertoken = GenerateUserToken();
+                    RegisterUserTokenService.RegisterUserToken(login, usertoken);
+                    return usertoken;
                 }
                 else
                 {
@@ -35,9 +37,12 @@ namespace MiddlewareApp.Metier
             }
         }
 
-        private string GenerateUserToken(string login, string pwd)
+        private string GenerateUserToken()
         {
-            return "123456789";
+            Random random = new Random();
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, 10)
+              .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
         //Vérification du Token Application

@@ -29,5 +29,16 @@ namespace MiddlewareApp.Persistence
             da.Fill(dt);
             return dt;
         }
+
+        public void SetUserToken(string login, string usertoken)
+        {
+            using (con) {
+
+                SqlCommand command = new SqlCommand("UPDATE users SET user_token = @usertoken Where login = @login");
+                command.Parameters.AddWithValue("@usertoken", usertoken);
+                command.Parameters.AddWithValue("@login", login);
+                command.ExecuteNonQuery();
+            }
+        }
     }
 }

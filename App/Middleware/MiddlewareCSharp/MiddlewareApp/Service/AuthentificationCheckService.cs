@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MiddlewareApp.Service
 {
-    class AuthentificationCheckService
+    public class AuthentificationCheckService
     {
         public bool GetUser(string login, string pwd)
         {
@@ -25,7 +25,6 @@ namespace MiddlewareApp.Service
             //Trouver une correspondance à login et vérifier le password
             foreach(DataRow row in dt.Rows)
             {
-                Debug.WriteLine("debut");
                 if ((string)row[1] == login && (string)row[2] == pwd)
                 {
                     success = true;
@@ -33,8 +32,49 @@ namespace MiddlewareApp.Service
                 }
             }
             DB.CloseConnection();
-            Debug.WriteLine("debut");
             return success;
+        }
+
+        public static bool CheckUserToken(string usertoken)
+        {
+            DataTable dt = new DataTable();
+            UsersDAO DB = new UsersDAO();
+
+            //Recuperer la table Users
+            DB.OpenConnection();
+            dt = DB.GetUsersTable();
+
+            //Trouver une correspondance à login et vérifier le password
+            foreach (DataRow row in dt.Rows)
+            {
+                if ((string)row[3] == usertoken)
+                {
+                    return true;
+                }
+            }
+            DB.CloseConnection();
+            return false;
+        }
+
+        public static string GetMailAdress(string usertoken)
+        {
+            DataTable dt = new DataTable();
+            UsersDAO DB = new UsersDAO();
+
+            //Recuperer la table Users
+            DB.OpenConnection();
+            dt = DB.GetUsersTable();
+
+            //Trouver une correspondance à login et vérifier le password
+            foreach (DataRow row in dt.Rows)
+            {
+                if ((string)row[3] == usertoken)
+                {
+                    return (string)row[1];
+                }
+            }
+            DB.CloseConnection();
+            return "";
         }
 
     }
