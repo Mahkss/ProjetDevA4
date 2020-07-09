@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="MiddlewareCSharp.Interuption" CodeBehind="Interuption.svc.cs" %>
