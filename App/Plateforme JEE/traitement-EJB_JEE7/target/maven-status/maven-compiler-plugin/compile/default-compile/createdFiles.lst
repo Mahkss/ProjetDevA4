@@ -1,0 +1,7 @@
+com\dev\traitement\ejb_jee7\database\EntityManager.class
+com\dev\traitement\ejb_jee7\NewSessionBean.class
+com\dev\traitement\ejb_jee7\jms\MessageMDBReceptor.class
+com\dev\traitement\ejb_jee7\jms\MessageMDBSender.class
+com\dev\traitement\ejb_jee7\services\DocumentAnalysisService.class
+com\dev\traitement\ejb_jee7\services\MainWebService.class
+com\dev\traitement\ejb_jee7\database\Dictionary.class
