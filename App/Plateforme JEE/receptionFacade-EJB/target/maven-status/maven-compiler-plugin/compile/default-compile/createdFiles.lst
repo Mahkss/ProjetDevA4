@@ -1,7 +1,9 @@
-com\uncipher\receptionfacade\ejb\jms\CommunicationMessage.class
 com\uncipher\receptionfacade\ejb\resources\JavaEE8Resource.class
-com\uncipher\receptionfacade\ejb\JAXRSConfiguration.class
+com\uncipher\receiver\TestReceiver.class
 com\uncipher\receptionfacade\ejb\jms\MessageMDBSender.class
+com\uncipher\sender\TestSender.class
+com\uncipher\receptionfacade\ejb\jms\CommunicationMessage.class
+com\uncipher\receptionfacade\ejb\JAXRSConfiguration.class
 com\uncipher\receptionfacade\ejb\model\MessageData.class
 com\uncipher\receptionfacade\ejb\services\ReceptionMessageBean.class
 com\uncipher\receptionfacade\ejb\model\Message.class

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiddlewareWCF", "MiddlewareCSharp\MiddlewareWCF.csproj", "{5A747B7D-B871-4FCE-91D5-4F60B621E665}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiddlewareApp", "MiddlewareApp\MiddlewareApp.csproj", "{F1B710E1-5C92-4A67-A7CA-53FDFC5BC83B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A747B7D-B871-4FCE-91D5-4F60B621E665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A747B7D-B871-4FCE-91D5-4F60B621E665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A747B7D-B871-4FCE-91D5-4F60B621E665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A747B7D-B871-4FCE-91D5-4F60B621E665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1B710E1-5C92-4A67-A7CA-53FDFC5BC83B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B710E1-5C92-4A67-A7CA-53FDFC5BC83B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B710E1-5C92-4A67-A7CA-53FDFC5BC83B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B710E1-5C92-4A67-A7CA-53FDFC5BC83B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87CFAA66-2924-43A6-B67D-EA549C0B0737}
+	EndGlobalSection
+EndGlobal
