@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace MiddlewareCSharp
 {
@@ -35,11 +36,11 @@ namespace MiddlewareCSharp
         [DataMember]
         public string OperationName { get => operationName; set => operationName = value; }
         [DataMember]
-        public string[] Data { get => data; set => data = value; }
+        public String[] Data { get => data; set => data = value; }
         [DataMember]
         public bool StatusOp { get => statusOp; set => statusOp = value; }
     }
 
 
-    
+
 }
