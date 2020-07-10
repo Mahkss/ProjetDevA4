@@ -107,11 +107,14 @@ namespace ProjetDevA4.Logic
                 return content;
         }
 
+        public static ResultWindow CreateShowResult()
+        {
+            ResultWindow RW = new ResultWindow();
+            return RW;
+        }
         public static void ShowResult(string fileName, string plainText, string secret, string key)
         {
-            //mut.WaitOne();
-            ResultWindow RW = new ResultWindow(fileName, plainText, secret, key);
-            //mut.ReleaseMutex();
+            rw.Update();
         }
 
     }

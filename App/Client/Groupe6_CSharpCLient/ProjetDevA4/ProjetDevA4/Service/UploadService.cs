@@ -16,7 +16,7 @@ namespace ProjetDevA4.Service
         public static void SendFile(string userToken, string appToken, string filename, string[] content)
         {
 
-            Upload.CreateShowResult();
+            ResultWindow rw = Upload.CreateShowResult();
 
              Task.Run(() =>
              {

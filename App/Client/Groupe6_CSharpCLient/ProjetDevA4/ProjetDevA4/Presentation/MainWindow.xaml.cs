@@ -34,7 +34,6 @@ namespace ProjetDevA4.Presentation
 
             userToken = usrTok;
             appToken = appTok;
-
             
         }
 
