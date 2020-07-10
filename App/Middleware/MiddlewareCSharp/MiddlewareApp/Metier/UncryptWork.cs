@@ -11,25 +11,28 @@ namespace MiddlewareApp.Metier
 {
     class UncryptWork
     {
+
         public static bool interruptCall = false;
 
         public static string[] validFile = new string[4];
 
-        public string[] StartWork(string userTok, string fileName, List<String> files)
+        public string[] StartWork(string userTok, string fileName, string file)
         {
-            //Genération la première clé AAAA
-            KeyGeneratorService KG = new KeyGeneratorService();
+            //Task.Run(() =>
+            //{
+                //Genération de la première clé AAAA
+                KeyGeneratorService KG = new KeyGeneratorService();
             string key = KG.GenerateKey();
 
-            validFile[0] = fileName;
+
+            Thread.Sleep(5000);
 
             //Tant que JEE n'a pas renvoyé de fichier décrypté valide
             while (!interruptCall && key != "")
             {
 
                 //Paraléllisation des tâches de déchiffrement, un fichier = un thread
-                Parallel.ForEach(files, file =>
-                {
+                
                     //Lancer le service Uncrypt avec la clé donnée
                     UncryptService US = new UncryptService();
                     VerificationService VS = new VerificationService();
@@ -37,9 +40,7 @@ namespace MiddlewareApp.Metier
                     string uncipherText = US.Uncrypt(file, key);
 
                     //Envoyer le texte déchiffré au service de vérification
-                    VS.Verify(uncipherText, key);
-                }
-                );
+                    Task.Run(() => VS.Verify(fileName, uncipherText, key));
 
                 //Générer la prochaine clé
                 key = KG.GenerateKey(key);
@@ -52,10 +53,14 @@ namespace MiddlewareApp.Metier
                 Console.WriteLine("Fichier validé pas encore reçu...");
             }
 
-            interruptCall = false;
+            //});
+
+            /*validFile[0] = fileName;
+            validFile[1] = "test text";
+            validFile[2] = "test key";
+            validFile[3] = "test info";*/
 
             return validFile;
-
         }
     }
 }
