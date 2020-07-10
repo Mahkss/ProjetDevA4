@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="12bdaa9a-7643-479c-987a-11509d62ae74" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:52707/Uncipher.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Uncipher.disco" MetadataType="Disco" ID="bb315efd-93f0-4688-b089-0ffb8f0a0366" SourceId="1" SourceUrl="http://localhost:52707/Uncipher.svc?disco" />
+    <MetadataFile FileName="Uncipher.xsd" MetadataType="Schema" ID="5d3dbe41-8db1-4fed-8b52-92b0eceab0a7" SourceId="1" SourceUrl="http://localhost:52707/Uncipher.svc?xsd=xsd0" />
+    <MetadataFile FileName="Uncipher1.xsd" MetadataType="Schema" ID="1fc51907-b5aa-46ff-98ff-d2319e0e430c" SourceId="1" SourceUrl="http://localhost:52707/Uncipher.svc?xsd=xsd2" />
+    <MetadataFile FileName="Uncipher2.xsd" MetadataType="Schema" ID="7973b738-2f68-4021-b2fe-6bca6a4ee522" SourceId="1" SourceUrl="http://localhost:52707/Uncipher.svc?xsd=xsd1" />
+    <MetadataFile FileName="Uncipher.wsdl" MetadataType="Wsdl" ID="a8d5f516-21c3-4c2e-b4e7-74195dd5eedf" SourceId="1" SourceUrl="http://localhost:52707/Uncipher.svc?wsdl" />
+    <MetadataFile FileName="Uncipher3.xsd" MetadataType="Schema" ID="dccf08e8-29f6-4483-9386-6d10f1e16114" SourceId="1" SourceUrl="http://localhost:52707/Uncipher.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
