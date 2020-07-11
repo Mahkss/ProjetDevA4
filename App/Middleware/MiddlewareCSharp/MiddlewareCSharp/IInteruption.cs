@@ -12,6 +12,6 @@ namespace MiddlewareCSharp
     public interface IInteruption
     {
         [OperationContract]
-        void DoWork();
+        void InteruptWork();
     }
 }

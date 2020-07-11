@@ -9,15 +9,18 @@ using System.Threading.Tasks;
 namespace MiddlewareCSharp
 {
     // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom d'interface "IUncipher" à la fois dans le code et le fichier de configuration.
-    [ServiceContract]
+    [ServiceContract(CallbackContract = typeof(IUncipherCallback))]
     public interface IUncipher
     {
         [OperationContract]
-        void DoWork();
+        void GetUncryptedInfo(Message msg);
 
+    }
+
+    public interface IUncipherCallback
+    {
         [OperationContract]
-        Message GetUncryptedInfo(Message msg);
-
+        void UncipherEnd(Message msg);
     }
 
     [DataContract]
