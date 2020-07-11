@@ -1,7 +1,7 @@
 # ProjetDevA4
 
 
-- Ouvrir CSharpClient dans visual studio
+- Ouvrir ProjetDevA4 dans visual studio (ignorer dossiers CSharpClient et Groupe6_Client)
 - Ouvrir MiddlewareCSharp dans visual studio
 - Ouvrir ReceptionJEE et TraitementJEE dans netbeans en tant que projets
 
