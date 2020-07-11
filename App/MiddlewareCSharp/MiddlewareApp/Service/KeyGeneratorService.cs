@@ -12,7 +12,7 @@ namespace MiddlewareApp.Service
 
         public string GenerateKey()
         {
-            return "AAAA";
+            return "AWHA";
         }
 
         public string GenerateKey(string prevKey)

@@ -1,6 +1,5 @@
 com\dev\reception\ejb_jee7\model\DocumentSOAPModel.class
 com\dev\reception\ejb_jee7\facade\ReceptionServiceBean.class
+com\dev\reception\ejb_jee7\facade\SenderWebService.class
 com\dev\reception\ejb_jee7\model\MessageSOAPModel.class
-com\dev\reception\ejb_jee7\jms\MessageMDBReceptor.class
 com\dev\reception\ejb_jee7\facade\ReceptionServiceEndPointInterface.class
-com\dev\reception\ejb_jee7\jms\MessageMDBSender.class

@@ -1,7 +1,6 @@
-D:\Documents\NetBeansProjects\traitement-EJB_JEE7\src\main\java\com\dev\traitement\ejb_jee7\services\MainWebService.java
-D:\Documents\NetBeansProjects\traitement-EJB_JEE7\src\main\java\com\dev\traitement\ejb_jee7\database\EntityManager.java
-D:\Documents\NetBeansProjects\traitement-EJB_JEE7\src\main\java\com\dev\traitement\ejb_jee7\jms\MessageMDBReceptor.java
-D:\Documents\NetBeansProjects\traitement-EJB_JEE7\src\main\java\com\dev\traitement\ejb_jee7\NewSessionBean.java
-D:\Documents\NetBeansProjects\traitement-EJB_JEE7\src\main\java\com\dev\traitement\ejb_jee7\database\Dictionary.java
-D:\Documents\NetBeansProjects\traitement-EJB_JEE7\src\main\java\com\dev\traitement\ejb_jee7\jms\MessageMDBSender.java
-D:\Documents\NetBeansProjects\traitement-EJB_JEE7\src\main\java\com\dev\traitement\ejb_jee7\services\DocumentAnalysisService.java
+D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Plateforme JEE\traitement-EJB_JEE7\src\main\java\com\dev\traitement\ejb_jee7\database\EntityManager.java
+D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Plateforme JEE\traitement-EJB_JEE7\src\main\java\com\dev\traitement\ejb_jee7\services\TestEntryWebService.java
+D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Plateforme JEE\traitement-EJB_JEE7\src\main\java\com\dev\traitement\ejb_jee7\NewSessionBean.java
+D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Plateforme JEE\traitement-EJB_JEE7\src\main\java\com\dev\traitement\ejb_jee7\services\DocumentAnalysisService.java
+D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Plateforme JEE\traitement-EJB_JEE7\src\main\java\com\dev\traitement\ejb_jee7\services\MainListener.java
+D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Plateforme JEE\traitement-EJB_JEE7\src\main\java\com\dev\traitement\ejb_jee7\database\Dictionary.java

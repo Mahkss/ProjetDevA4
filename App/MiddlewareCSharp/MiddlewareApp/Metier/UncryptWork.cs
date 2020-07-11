@@ -15,7 +15,7 @@ namespace MiddlewareApp.Metier
 
         public static string[] validFile = new string[4];
 
-        public string[] StartWork(string userTok, string fileName, List<String> files)
+        public string[] StartWork(string userTok, string fileName, List<String> filesOne)
         {
             //Genération la première clé AAAA
             KeyGeneratorService KG = new KeyGeneratorService();
@@ -24,20 +24,20 @@ namespace MiddlewareApp.Metier
             validFile[0] = fileName;
 
             //Tant que JEE n'a pas renvoyé de fichier décrypté valide
-            while (!interruptCall && key != "")
+            while (!interruptCall && key != "AWHJ")
             {
 
-                //Paraléllisation des tâches de déchiffrement, un fichier = un thread
-                Parallel.ForEach(files, file =>
+                //Paraléllisation des tâches de déchiffrement, un fichier = un thread (FAUX, un seul fichier est envoyé dans data[] depuis le client)
+                Parallel.ForEach(filesOne, fileData =>
                 {
                     //Lancer le service Uncrypt avec la clé donnée
                     UncryptService US = new UncryptService();
                     VerificationService VS = new VerificationService();
 
-                    string uncipherText = US.Uncrypt(file, key);
+                    string uncipherText = US.Uncrypt(fileData, key);
 
                     //Envoyer le texte déchiffré au service de vérification
-                    VS.Verify(uncipherText, key);
+                    VS.Verify(uncipherText, key, fileName);
                 }
                 );
 

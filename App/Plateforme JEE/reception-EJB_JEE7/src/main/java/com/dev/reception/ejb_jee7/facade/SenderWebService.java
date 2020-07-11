@@ -39,16 +39,16 @@ public class SenderWebService implements MessageListener {
     
     public void sendRequest() {
         try {
-            String url = "http://localhost:55555";  // port middleware .NET
+            String url = "http://localhost:52707";  // port middleware .NET
             URL obj = new URL(url);
             HttpURLConnection con = (HttpURLConnection) obj.openConnection();
             con.setRequestMethod("POST");
             con.setRequestProperty("Content-Type", "application/soap+xml; charset=utf-8");
-            String countryCode = "Canada";
+            String countryCode = "FR";
             String xml = "<S:Envelope xmlns:S=\"http://schemas.xmlsoap.org/soap/envelope/\">\n"
                     + "   <S:Body>\n"
-                    + "      <ns2:setMessageResponse xmlns:ns2=\"http://services.ejb.receptionfacade.uncipher.com/\">\n"
-                    + "         <returnedMessage>\n"
+                    + "      <ns2:receptionOperation xmlns:ns2=\"http://services.ejb.receptionfacade.uncipher.com/\">\n"
+                    + "         <message>\n"
                     + "            <appVersion>1.0</appVersion>\n"
                     + "            <data>[{\"title\" : \"fichier.txt\", \"content\" : \"txt a déchifffffffrer oui bonhomme\"}]</data>\n"
                     + "            <info>Zèèèèbi j'ai finis ce que j'avais à faire</info>\n"
@@ -57,8 +57,8 @@ public class SenderWebService implements MessageListener {
                     + "            <statusOp>true</statusOp>\n"
                     + "            <tokenApp>123456789</tokenApp>\n"
                     + "            <tokenUser>123456789</tokenUser>\n"
-                    + "         </returnedMessage>\n"
-                    + "      </ns2:setMessageResponse>\n"
+                    + "         </message>\n"
+                    + "      </ns2:receptionOperation>\n"
                     + "   </S:Body>\n"
                     + "</S:Envelope>";
             con.setDoOutput(true);

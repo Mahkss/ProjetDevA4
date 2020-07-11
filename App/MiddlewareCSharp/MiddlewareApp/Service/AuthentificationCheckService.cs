@@ -24,7 +24,9 @@ namespace MiddlewareApp.Service
             //Trouver une correspondance à login et vérifier le password
             foreach(DataRow row in dt.Rows)
             {
-                if((string)row[1] == login && (string)row[2] == pwd)
+                String tmp = (string)row[0];
+                String tmp2 = (string)row.ItemArray[0];
+                if ((string)row.ItemArray[0] == login && (string)row.ItemArray[1] == pwd)
                 {
                     success = true;
                     break;

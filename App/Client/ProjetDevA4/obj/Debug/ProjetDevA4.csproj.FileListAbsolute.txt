@@ -39,7 +39,6 @@ C:\Users\maxpa\source\repos\ProjetDevA4\ProjetDevA4\obj\Debug\ProjetDevA4.pdb
 D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Client\ProjetDevA4\bin\Debug\ProjetDevA4.exe.config
 D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Client\ProjetDevA4\bin\Debug\ProjetDevA4.exe
 D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Client\ProjetDevA4\bin\Debug\ProjetDevA4.pdb
-D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Client\ProjetDevA4\obj\Debug\ProjetDevA4.csprojAssemblyReference.cache
 D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Client\ProjetDevA4\obj\Debug\Presentation\MainWindow.g.cs
 D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Client\ProjetDevA4\obj\Debug\Presentation\LoginWindow.g.cs
 D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Client\ProjetDevA4\obj\Debug\Presentation\ResultWindow.g.cs
@@ -55,3 +54,4 @@ D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Client\ProjetDevA4\obj\Debug\Pr
 D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Client\ProjetDevA4\obj\Debug\ProjetDevA4.csproj.CoreCompileInputs.cache
 D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Client\ProjetDevA4\obj\Debug\ProjetDevA4.exe
 D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Client\ProjetDevA4\obj\Debug\ProjetDevA4.pdb
+D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Client\ProjetDevA4\obj\Debug\ProjetDevA4.csprojAssemblyReference.cache

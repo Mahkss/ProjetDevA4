@@ -32,7 +32,7 @@ public class EntityManager {
     
     // Constructor : Init DB connection
     public EntityManager() {
-        System.out.println("Info: EntityManager instanciated");
+        ///System.out.println("Info: EntityManager instanciated");
         try
         {
             /*
@@ -46,12 +46,12 @@ public class EntityManager {
             /*
              * STEP 2: Open a connection
              */
-            System.out.println("Connecting to database...");
+            ///System.out.println("Connecting to database...");
             // Oracle SID = orcl
             connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "schema_owner", "password");
 
             if (connection != null) {
-                System.out.println("Connected to the database!");
+                ///System.out.println("Connected to the database!");
             } else {
                 System.out.println("Failed to make connection!");
             }
@@ -76,8 +76,8 @@ public class EntityManager {
             /*
              * STEP 3: Execute a query
              */
-            System.out.println("Loading table statement...");
-            System.out.println("-----------------------------------------------------");
+            ///System.out.println("Loading table statement...");
+            ///System.out.println("-----------------------------------------------------");
             stmt = connection.createStatement();
             String sql = "select WORD from " + tableName;
             result = stmt.executeQuery(sql);
@@ -96,8 +96,8 @@ public class EntityManager {
     // Create a new database table
     public boolean createTable(String tableName) {
         try {
-            System.out.println("Creating table statement...");
-            System.out.println("-----------------------------------------------------");
+            ///System.out.println("Creating table statement...");
+            ///System.out.println("-----------------------------------------------------");
             String sql =    "CREATE TABLE " + tableName +
                             " (" +
                             " ID INT PRIMARY KEY NOT NULL," +
@@ -110,12 +110,23 @@ public class EntityManager {
         return true;
     }
     
+    // Delete all rows in a table
+    public boolean deleteTable(String tableName) {
+        try {
+            ///System.out.println("Deleting rows table statement...");
+            ///System.out.println("-----------------------------------------------------");
+            String sql =    "DELETE FROM " + tableName;
+            result = stmt.executeQuery(sql);
+        }
+        catch (SQLException se)
+        { return false; }
+        return true;
+    }
+    
     // Push a single word into a table
     public boolean insertTable(String tableName, String word) {
         try {
             // Exe SQL query
-            System.out.println("Inserting table statement...");
-            System.out.println("-----------------------------------------------------");
             stmt = connection.createStatement();
             String sql = new StringBuilder(
                     "INSERT INTO ")
@@ -136,8 +147,8 @@ public class EntityManager {
         int counterMatch = 0;
         
         try {
-            System.out.println("Counting nbr of matchs statement...");
-            System.out.println("-----------------------------------------------------");
+            ///System.out.println("Counting nbr of matchs statement...");
+            ///System.out.println("-----------------------------------------------------");
             stmt = connection.createStatement();
             String sql =    "SELECT COUNT(*) AS match" +
                             " FROM " + tableName +
@@ -146,7 +157,7 @@ public class EntityManager {
             while(result.next()) {
                 counterMatch = result.getInt("match");
             }
-            System.out.println("Dico match nbr = " + counterMatch);
+            ///System.out.println("Dico match nbr = " + counterMatch);
         }
         catch (SQLException se)
         { se.printStackTrace(); }
@@ -157,8 +168,8 @@ public class EntityManager {
     // Compare dictionary to another table of words to join them and calcul rate of match words
     public boolean loadDicoInnerJoin(String tableName) {
         try {
-            System.out.println("Loading dico inner join statement...");
-            System.out.println("-----------------------------------------------------");
+            ///System.out.println("Loading dico inner join statement...");
+            ///System.out.println("-----------------------------------------------------");
             stmt = connection.createStatement();
             String sql =    "SELECT "+tableName+".WORD" +
                             " FROM " + tableName +
@@ -202,7 +213,7 @@ public class EntityManager {
             if (stmt != null)
             {
                 stmt.close();
-                System.out.println("Statement closed.");
+                ///System.out.println("Statement closed.");
             }
         }
         catch (SQLException sqlException)
@@ -214,7 +225,7 @@ public class EntityManager {
             if (connection != null)
             {
                 connection.close();
-                System.out.println("Connection closed.");
+                ///System.out.println("Connection closed.");
             }
         }
         catch (SQLException sqlException)

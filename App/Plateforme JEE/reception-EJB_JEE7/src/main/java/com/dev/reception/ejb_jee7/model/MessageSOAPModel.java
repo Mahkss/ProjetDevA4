@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlElement;
 public class MessageSOAPModel {
     private Boolean statusOp;
     private String info;
-    private Object[] data;
+    private Object data;
     private String operationName;
     private String tokenApp;
     private String tokenUser;
@@ -36,7 +36,7 @@ public class MessageSOAPModel {
 
     public MessageSOAPModel() {}
     
-    public MessageSOAPModel(Boolean statusOp, String info, Object[] data, String operationName, String tokenApp, String tokenUser, String appVersion, String operationVersion) {
+    public MessageSOAPModel(Boolean statusOp, String info, Object data, String operationName, String tokenApp, String tokenUser, String appVersion, String operationVersion) {
         this.statusOp = statusOp;
         this.info = info;
         this.data = data;
@@ -68,7 +68,7 @@ public class MessageSOAPModel {
     }
 
     @XmlElement(name = "data")
-    public Object[] getData() {
+    public Object getData() {
         return data;
     }
 

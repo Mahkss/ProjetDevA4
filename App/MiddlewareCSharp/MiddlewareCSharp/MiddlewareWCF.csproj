@@ -80,18 +80,22 @@
     <Content Include="Authentification.svc" />
     <Content Include="Interuption.svc" />
     <Content Include="Uncipher.svc" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authentification.svc.cs">
       <DependentUpon>Authentification.svc</DependentUpon>
     </Compile>
     <Compile Include="IAuthentification.cs" />
+    <Compile Include="IContract.cs" />
     <Compile Include="IInteruption.cs" />
     <Compile Include="Interuption.svc.cs">
       <DependentUpon>Interuption.svc</DependentUpon>
     </Compile>
     <Compile Include="IUncipher.cs" />
+    <Compile Include="MessageComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Uncipher.svc.cs">
       <DependentUpon>Uncipher.svc</DependentUpon>

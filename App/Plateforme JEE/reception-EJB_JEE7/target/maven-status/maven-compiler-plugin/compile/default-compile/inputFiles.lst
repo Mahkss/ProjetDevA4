@@ -1,6 +1,5 @@
-D:\Documents\NetBeansProjects\reception-EJB_JEE7\src\main\java\com\dev\reception\ejb_jee7\facade\ReceptionServiceEndPointInterface.java
-D:\Documents\NetBeansProjects\reception-EJB_JEE7\src\main\java\com\dev\reception\ejb_jee7\jms\MessageMDBReceptor.java
-D:\Documents\NetBeansProjects\reception-EJB_JEE7\src\main\java\com\dev\reception\ejb_jee7\facade\ReceptionServiceBean.java
-D:\Documents\NetBeansProjects\reception-EJB_JEE7\src\main\java\com\dev\reception\ejb_jee7\jms\MessageMDBSender.java
-D:\Documents\NetBeansProjects\reception-EJB_JEE7\src\main\java\com\dev\reception\ejb_jee7\model\DocumentSOAPModel.java
-D:\Documents\NetBeansProjects\reception-EJB_JEE7\src\main\java\com\dev\reception\ejb_jee7\model\MessageSOAPModel.java
+D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Plateforme JEE\reception-EJB_JEE7\src\main\java\com\dev\reception\ejb_jee7\facade\SenderWebService.java
+D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Plateforme JEE\reception-EJB_JEE7\src\main\java\com\dev\reception\ejb_jee7\model\DocumentSOAPModel.java
+D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Plateforme JEE\reception-EJB_JEE7\src\main\java\com\dev\reception\ejb_jee7\model\MessageSOAPModel.java
+D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Plateforme JEE\reception-EJB_JEE7\src\main\java\com\dev\reception\ejb_jee7\facade\ReceptionServiceBean.java
+D:\Documents\NetBeansProjectsGIT\ProjetDevA4\App\Plateforme JEE\reception-EJB_JEE7\src\main\java\com\dev\reception\ejb_jee7\facade\ReceptionServiceEndPointInterface.java
