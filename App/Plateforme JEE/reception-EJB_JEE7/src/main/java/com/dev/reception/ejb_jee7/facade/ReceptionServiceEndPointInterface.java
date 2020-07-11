@@ -17,7 +17,7 @@ import javax.jws.WebService;
  */
 @WebService(name="ReceptionEndPoint")   // = nom de l'élément XML <wsdl:portype>
 public interface ReceptionServiceEndPointInterface {
-    @WebMethod(operationName = "receptionOperation")
+    @WebMethod(operationName = "createReceptionOperation")
     @WebResult(name = "acceptedReception")  // = nom de la balise parent XML qui sera retournée avec les résultats dedans
-    void verifyUncipher(@WebParam(name = "message")MessageSOAPModel msg);
+    boolean verifyUncipher(@WebParam(name="decipheredText") String text, @WebParam(name="usedKey") String usedKey, @WebParam(name="fileName") String fileName);
 }
