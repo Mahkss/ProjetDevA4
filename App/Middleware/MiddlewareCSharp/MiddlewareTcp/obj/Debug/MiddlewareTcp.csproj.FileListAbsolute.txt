@@ -1,0 +1,11 @@
+C:\Users\Vince\Documents\GitHub\ProjetDevA4\App\Middleware\MiddlewareCSharp\MiddlewareTcp\bin\Debug\MiddlewareTcp.dll.config
+C:\Users\Vince\Documents\GitHub\ProjetDevA4\App\Middleware\MiddlewareCSharp\MiddlewareTcp\bin\Debug\MiddlewareTcp.dll
+C:\Users\Vince\Documents\GitHub\ProjetDevA4\App\Middleware\MiddlewareCSharp\MiddlewareTcp\bin\Debug\MiddlewareTcp.pdb
+C:\Users\Vince\Documents\GitHub\ProjetDevA4\App\Middleware\MiddlewareCSharp\MiddlewareTcp\obj\Debug\MiddlewareTcp.csprojAssemblyReference.cache
+C:\Users\Vince\Documents\GitHub\ProjetDevA4\App\Middleware\MiddlewareCSharp\MiddlewareTcp\obj\Debug\MiddlewareTcp.csproj.CoreCompileInputs.cache
+C:\Users\Vince\Documents\GitHub\ProjetDevA4\App\Middleware\MiddlewareCSharp\MiddlewareTcp\obj\Debug\MiddlewareTcp.dll
+C:\Users\Vince\Documents\GitHub\ProjetDevA4\App\Middleware\MiddlewareCSharp\MiddlewareTcp\obj\Debug\MiddlewareTcp.pdb
+C:\Users\Vince\Documents\GitHub\ProjetDevA4\App\Middleware\MiddlewareCSharp\MiddlewareTcp\bin\Debug\MiddlewareApp.exe
+C:\Users\Vince\Documents\GitHub\ProjetDevA4\App\Middleware\MiddlewareCSharp\MiddlewareTcp\bin\Debug\MiddlewareApp.pdb
+C:\Users\Vince\Documents\GitHub\ProjetDevA4\App\Middleware\MiddlewareCSharp\MiddlewareTcp\bin\Debug\MiddlewareApp.exe.config
+C:\Users\Vince\Documents\GitHub\ProjetDevA4\App\Middleware\MiddlewareCSharp\MiddlewareTcp\obj\Debug\MiddlewareTcp.csproj.CopyComplete

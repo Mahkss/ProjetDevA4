@@ -11,7 +11,8 @@ namespace MiddlewareApp.Service
 {
     class RegisterUserTokenService
     {
-        public static void RegisterUserToken(string login, string usertoken) {
+        public static void RegisterUserToken(string login, string usertoken)
+        {
             UsersDAO DB = new UsersDAO();
 
             //Recuperer la table Users

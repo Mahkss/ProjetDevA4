@@ -57,12 +57,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
+    <Compile Include="Connected Services\MiddlewareTcp\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\ServiceReference2\Reference.cs">
+    <Compile Include="Connected Services\MiddlewareWCF\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -116,27 +116,24 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Connected Services\ServiceReference1\Authentification.wsdl" />
-    <None Include="Connected Services\ServiceReference1\Authentification.xsd">
+    <None Include="Connected Services\MiddlewareTcp\Arrays.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\Authentification1.xsd">
+    <None Include="Connected Services\MiddlewareTcp\MiddlewareCSharp.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference2\ProjetDevA4.ServiceReference2.Message.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ServiceReference2\Uncipher.wsdl" />
-    <None Include="Connected Services\ServiceReference2\Uncipher.xsd">
+    <None Include="Connected Services\MiddlewareTcp\service.wsdl" />
+    <None Include="Connected Services\MiddlewareTcp\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference2\Uncipher1.xsd">
+    <None Include="Connected Services\MiddlewareTcp\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference2\Uncipher11.xsd">
+    <None Include="Connected Services\MiddlewareWCF\Authentification.wsdl" />
+    <None Include="Connected Services\MiddlewareWCF\Authentification.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference2\Uncipher12.xsd">
+    <None Include="Connected Services\MiddlewareWCF\Authentification1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">
@@ -151,35 +148,32 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
-    <WCFMetadataStorage Include="Connected Services\ServiceReference2\" />
+    <WCFMetadataStorage Include="Connected Services\MiddlewareTcp\" />
+    <WCFMetadataStorage Include="Connected Services\MiddlewareWCF\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\Authentification.disco" />
+    <None Include="Connected Services\MiddlewareWCF\Authentification.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Connected Services\MiddlewareWCF\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
+    <None Include="Connected Services\MiddlewareWCF\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+    <None Include="Connected Services\MiddlewareWCF\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference2\Uncipher.disco" />
+    <None Include="Connected Services\MiddlewareTcp\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference2\configuration91.svcinfo" />
+    <None Include="Connected Services\MiddlewareTcp\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference2\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ServiceReference2\Reference.svcmap">
+    <None Include="Connected Services\MiddlewareTcp\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

@@ -24,7 +24,8 @@ namespace ProjetDevA4.Logic
                 string[] Content = new string[1];
                 Content[0] = File.ReadAllText(openFileDialog.FileName);
 
-                UploadService.SendFile(window.userToken, window.appToken, FileName, Content);
+                UploadService service = new UploadService();
+                service.SendFile(window.userToken, window.appToken, FileName, Content);
 
                 MessageBox.Show("Le fichier \"" + FileName + "\" a bien été envoyé. \n\n Vous recevrez un e-mail lorsque le message aura été déchiffré.", "Fichier envoyé", MessageBoxButton.OK, MessageBoxImage.Information);
                 window.FileList.Items.Add(new TxtFile() { Hour = DateTime.Now.ToString(), Name = FileName, Content = ShorteningContent(Content[0]) });
@@ -43,7 +44,9 @@ namespace ProjetDevA4.Logic
 
         public static void ShowResult(string fileName, string plainText, string secret, string key)
         {
-            ResultWindow RW = new ResultWindow(fileName, plainText, secret, key);
+            Application.Current.Dispatcher.Invoke((Action)delegate {
+                ResultWindow RW = new ResultWindow(fileName, plainText, secret, key);
+            });
         }
 
     }

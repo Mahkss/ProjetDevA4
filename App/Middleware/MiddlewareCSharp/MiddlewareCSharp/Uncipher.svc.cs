@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Threading;
 
 namespace MiddlewareCSharp
 {
@@ -13,18 +14,16 @@ namespace MiddlewareCSharp
     // REMARQUE : pour lancer le client test WCF afin de tester ce service, sélectionnez Uncipher.svc ou Uncipher.svc.cs dans l'Explorateur de solutions et démarrez le débogage.
     public class Uncipher : IUncipher
     {
-        public void DoWork()
-        {
-        }
+
 
         public Message GetUncryptedInfo(Message msg)
         {
             //Namespace Coordination courcicuité pour gagner du temps. A réagencer
-            if (!MiddlewareApp.Service.AuthentificationCheckService.CheckUserToken(msg.TokenUSer))
+            /*if (!MiddlewareApp.Service.AuthentificationCheckService.CheckUserToken(msg.TokenUSer))
             {
                 msg.StatusOp = false;
                 return msg;
-            } 
+            } */
 
             LaunchUncrypt LU = new LaunchUncrypt();
 
@@ -38,7 +37,7 @@ namespace MiddlewareCSharp
             response.TokenApp = msg.TokenApp;
             response.TokenUSer = msg.TokenUSer;
             response.Data = validFile;
-
+            OperationContext.Current.GetCallbackChannel<IUncipherCallback>().Test();
             return response;
         }
 

@@ -12,7 +12,7 @@ namespace MiddlewareApp.Metier
     {
         public static void SendValidationMail(string user_token)
         {
-            MailMessage message = new MailMessage("projet_dev@pansera.fr", AuthentificationCheckService.GetMailAdress(user_token););
+            MailMessage message = new MailMessage("projet_dev@pansera.fr", AuthentificationCheckService.GetMailAdress(user_token));
             message.Subject = "Fichier décrypté";
             message.Body = @"Un fichier a été décrypté ! Rendez-vous sur l'application pour consulter les résultats.";
             SmtpClient MailServer = new SmtpClient("ssl0.ovh.net");

@@ -10,7 +10,7 @@ namespace ProjetDevA4.Service
     {
         public static string Login(string login, string password, string Apptoken)
         {
-            var client = new ServiceReference1.AuthentificationClient();
+            var client = new MiddlewareWCF.AuthentificationClient();
 
             var UserToken = client.CheckLogin(login, password, Apptoken);
 

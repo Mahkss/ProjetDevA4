@@ -66,12 +66,14 @@
     <Compile Include="Coordination\LaunchInterrupt.cs" />
     <Compile Include="Coordination\LaunchUncrypt.cs" />
     <Compile Include="Metier\AuthentificationWork.cs" />
+    <Compile Include="Metier\MailWork.cs" />
     <Compile Include="Metier\UncryptWork.cs" />
     <Compile Include="Persistence\UsersDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\AuthentificationCheckService.cs" />
     <Compile Include="Service\KeyGeneratorService.cs" />
+    <Compile Include="Service\RegisterUserTokenService.cs" />
     <Compile Include="Service\UncryptService.cs" />
     <Compile Include="Service\VerificationService.cs" />
   </ItemGroup>

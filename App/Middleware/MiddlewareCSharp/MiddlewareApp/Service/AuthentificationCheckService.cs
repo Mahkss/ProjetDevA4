@@ -25,7 +25,8 @@ namespace MiddlewareApp.Service
             //Trouver une correspondance à login et vérifier le password
             foreach(DataRow row in dt.Rows)
             {
-                if ((string)row[1] == login && (string)row[2] == pwd)
+                
+                if (!DBNull.Value.Equals(row[0]) && !DBNull.Value.Equals(row[1]) && (string)row[0] == login && (string)row[1] == pwd)
                 {
                     success = true;
                     break;
@@ -47,7 +48,7 @@ namespace MiddlewareApp.Service
             //Trouver une correspondance à login et vérifier le password
             foreach (DataRow row in dt.Rows)
             {
-                if ((string)row[3] == usertoken)
+                if (!DBNull.Value.Equals(row[2]) && (string)row[2] == usertoken)
                 {
                     return true;
                 }
@@ -68,9 +69,9 @@ namespace MiddlewareApp.Service
             //Trouver une correspondance à login et vérifier le password
             foreach (DataRow row in dt.Rows)
             {
-                if ((string)row[3] == usertoken)
+                if (!DBNull.Value.Equals(row[2]) && (string)row[2] == usertoken)
                 {
-                    return (string)row[1];
+                    return (string)row[0];
                 }
             }
             DB.CloseConnection();

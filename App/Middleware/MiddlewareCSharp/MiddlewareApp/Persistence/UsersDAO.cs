@@ -32,12 +32,21 @@ namespace MiddlewareApp.Persistence
 
         public void SetUserToken(string login, string usertoken)
         {
-            using (con) {
+            using (SqlConnection con = new SqlConnection("server=localhost;user id=test;password=test;database=dev_project;persistsecurityinfo=True")) {
 
-                SqlCommand command = new SqlCommand("UPDATE users SET user_token = @usertoken Where login = @login");
+                SqlCommand command = new SqlCommand("UPDATE users SET user_token = @usertoken Where login = @login", con);
                 command.Parameters.AddWithValue("@usertoken", usertoken);
                 command.Parameters.AddWithValue("@login", login);
-                command.ExecuteNonQuery();
+                try
+                {
+                    con.Open();
+                    command.ExecuteNonQuery();
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
             }
         }
     }

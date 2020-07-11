@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetDevA4.Presentation"
         mc:Ignorable="d"
-        Title="Authentification" Height="180" Width="300" MinHeight="170" MinWidth="260">
+        Title="Authentification" Height="180" Width="300" MinHeight="170" MinWidth="340">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="10"></RowDefinition>
@@ -17,13 +17,13 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
             <ColumnDefinition MinWidth="100"/>
-            <ColumnDefinition MinWidth="120"/>
+            <ColumnDefinition MinWidth="200"/>
             <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
         <Label x:Name="LoginLabel" Content="Identifiant: " Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Center" FontWeight="Bold" FontSize="14"/>
-        <TextBox x:Name="LoginTextBox" Grid.Column="2" HorizontalAlignment="Left" Height="23" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <TextBox x:Name="LoginTextBox" Text="vincent.pansera@wanadoo.fr" Grid.Column="2" HorizontalAlignment="Left" Height="23" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="200"/>
         <Label x:Name="PasswordLabel" Content="Mot de passe: " Grid.Column="1" HorizontalAlignment="Right" Grid.Row="2" VerticalAlignment="Center" FontWeight="Bold" FontSize="14"/>
-        <PasswordBox x:Name="PasswordBox" Grid.Column="2" HorizontalAlignment="Left" Height="23" Grid.Row="2" VerticalAlignment="Center" Width="120"/>
+        <PasswordBox x:Name="PasswordBox" Password="MotDePasse" Grid.Column="2" HorizontalAlignment="Left" Height="23" Grid.Row="2" VerticalAlignment="Center" Width="200"/>
         <Button x:Name="LoginButton" Click="LoginButton_Click" Grid.ColumnSpan="2" Content="Se connecter" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Width="100" FontWeight="Bold" FontSize="14"/>
 
     </Grid>

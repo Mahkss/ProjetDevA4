@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="UpSHtPGVW4mF9a4SR8IiVgXB5O464pONvAXPJ3AKSgs=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="2xLFd4pZOsIDO8Zzd8Q3qM7mfixUXf2qU2vKzLRW9OY=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IAuthentification">
       <properties>
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IAuthentification" contract="ServiceReference1.IAuthentification" bindingType="basicHttpBinding" address="http://localhost:52707/Authentification.svc" bindingConfiguration="BasicHttpBinding_IAuthentification">
+    <endpoint name="BasicHttpBinding_IAuthentification" contract="MiddlewareWCF.IAuthentification" bindingType="basicHttpBinding" address="http://localhost:52707/Authentification.svc" bindingConfiguration="BasicHttpBinding_IAuthentification">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:52707/Authentification.svc</serializedValue>
@@ -127,7 +127,7 @@
           <serializedValue>BasicHttpBinding_IAuthentification</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ServiceReference1.IAuthentification</serializedValue>
+          <serializedValue>MiddlewareWCF.IAuthentification</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>
