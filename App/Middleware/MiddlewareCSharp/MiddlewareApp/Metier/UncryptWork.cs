@@ -47,7 +47,7 @@ namespace MiddlewareApp.Metier
 
             }
 
-            while(validFile == null)
+            while(validFile[0] == null)
             {
                 Thread.Sleep(1000);
                 Console.WriteLine("Fichier validé pas encore reçu...");
