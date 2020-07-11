@@ -13,10 +13,10 @@ namespace MiddlewareCSharp
     // REMARQUE : pour lancer le client test WCF afin de tester ce service, sélectionnez Interuption.svc ou Interuption.svc.cs dans l'Explorateur de solutions et démarrez le débogage.
     public class Interuption : IInteruption
     {
-        public void InteruptWork()
+        public void InteruptWork(Message msg)
         {
             LaunchInterrupt LI = new LaunchInterrupt();
-
+            LI.StartInterrupt(msg.Data[0], msg.Data[1], msg.Data[2], msg.Data[3]);
         }
     }
 }

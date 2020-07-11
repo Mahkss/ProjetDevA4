@@ -12,6 +12,28 @@ namespace MiddlewareCSharp
     public interface IInteruption
     {
         [OperationContract]
-        void InteruptWork();
+        void InteruptWork(Message msg);
     }
+
+    [DataContract]
+    public class Message
+    {
+        private Boolean statusOp = true;
+        private String[] data;
+        private String operationName;
+        private String tokenApp;
+        private String tokenUSer;
+
+        [DataMember]
+        public string TokenApp { get => tokenApp; set => tokenApp = value; }
+        [DataMember]
+        public string TokenUSer { get => tokenUSer; set => tokenUSer = value; }
+        [DataMember]
+        public string OperationName { get => operationName; set => operationName = value; }
+        [DataMember]
+        public String[] Data { get => data; set => data = value; }
+        [DataMember]
+        public bool StatusOp { get => statusOp; set => statusOp = value; }
+    }
+
 }
