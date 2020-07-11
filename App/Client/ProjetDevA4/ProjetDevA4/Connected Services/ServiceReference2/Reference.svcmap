@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ddb903d0-7435-4c7e-bf33-df5f24b6be8d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:8080/Uncipher/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="c9053844-749d-4704-8370-c90d2089d305" SourceId="1" SourceUrl="net.tcp://localhost:8080/Uncipher/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="e0c6e24e-3d78-477d-900e-06f6b1f01389" SourceId="1" SourceUrl="net.tcp://localhost:8080/Uncipher/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="ad24d9b3-681c-4d3c-843c-7922f3d04f3d" SourceId="1" SourceUrl="net.tcp://localhost:8080/Uncipher/mex" />
+    <MetadataFile FileName="WcfService.xsd" MetadataType="Schema" ID="7cbef644-1c5d-4590-a3b4-c80e9fadcb76" SourceId="1" SourceUrl="net.tcp://localhost:8080/Uncipher/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="893b143a-48d5-4fee-9a6d-8cf6d6e769f3" SourceId="1" SourceUrl="net.tcp://localhost:8080/Uncipher/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
