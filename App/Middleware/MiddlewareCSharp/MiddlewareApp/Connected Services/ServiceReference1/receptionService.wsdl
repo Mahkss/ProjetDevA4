@@ -5,21 +5,21 @@
       <xsd:import schemaLocation="http://dellmax:10080/receptionService/ReceptionServiceBean?xsd=1" namespace="http://facade.ejb_jee7.reception.dev.com/" />
     </xsd:schema>
   </types>
-  <message name="receptionOperation">
-    <part name="parameters" element="tns:receptionOperation" />
+  <message name="createReceptionOperation">
+    <part name="parameters" element="tns:createReceptionOperation" />
   </message>
-  <message name="receptionOperationResponse">
-    <part name="parameters" element="tns:receptionOperationResponse" />
+  <message name="createReceptionOperationResponse">
+    <part name="parameters" element="tns:createReceptionOperationResponse" />
   </message>
   <portType name="ReceptionEndPoint">
-    <operation name="receptionOperation">
-      <input wsam:Action="http://facade.ejb_jee7.reception.dev.com/ReceptionEndPoint/receptionOperationRequest" message="tns:receptionOperation" />
-      <output wsam:Action="http://facade.ejb_jee7.reception.dev.com/ReceptionEndPoint/receptionOperationResponse" message="tns:receptionOperationResponse" />
+    <operation name="createReceptionOperation">
+      <input wsam:Action="http://facade.ejb_jee7.reception.dev.com/ReceptionEndPoint/createReceptionOperationRequest" message="tns:createReceptionOperation" />
+      <output wsam:Action="http://facade.ejb_jee7.reception.dev.com/ReceptionEndPoint/createReceptionOperationResponse" message="tns:createReceptionOperationResponse" />
     </operation>
   </portType>
   <binding name="receptionPortBinding" type="tns:ReceptionEndPoint">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="receptionOperation">
+    <operation name="createReceptionOperation">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

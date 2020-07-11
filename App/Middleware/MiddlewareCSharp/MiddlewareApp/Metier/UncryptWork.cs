@@ -39,8 +39,8 @@ namespace MiddlewareApp.Metier
 
                     string uncipherText = US.Uncrypt(file, key);
 
-                    //Envoyer le texte déchiffré au service de vérification
-                    Task.Run(() => VS.Verify(fileName, uncipherText, key));
+                //Envoyer le texte déchiffré au service de vérification
+                VS.Verify(fileName, uncipherText, key);
 
                 //Générer la prochaine clé
                 key = KG.GenerateKey(key);

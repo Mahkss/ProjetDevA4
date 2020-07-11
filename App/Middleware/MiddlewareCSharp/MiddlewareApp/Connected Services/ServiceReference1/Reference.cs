@@ -15,240 +15,91 @@ namespace MiddlewareApp.ServiceReference1 {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://facade.ejb_jee7.reception.dev.com/", ConfigurationName="ServiceReference1.ReceptionEndPoint")]
     public interface ReceptionEndPoint {
         
-        // CODEGEN : Le paramètre 'message' nécessite des informations de schéma supplémentaires qui ne peuvent pas être capturées en utilisant le mode du paramètre. L'attribut spécifique est 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://facade.ejb_jee7.reception.dev.com/ReceptionEndPoint/receptionOperationRequ" +
-            "est", ReplyAction="http://facade.ejb_jee7.reception.dev.com/ReceptionEndPoint/receptionOperationResp" +
-            "onse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(receptionOperationResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(receptionOperation))]
-        MiddlewareApp.ServiceReference1.receptionOperationResponse1 receptionOperation(MiddlewareApp.ServiceReference1.receptionOperationRequest request);
+        // CODEGEN : La génération du contrat de message depuis le nom d'élément decipheredText de l'espace de noms  n'est pas marqué nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://facade.ejb_jee7.reception.dev.com/ReceptionEndPoint/createReceptionOperati" +
+            "onRequest", ReplyAction="http://facade.ejb_jee7.reception.dev.com/ReceptionEndPoint/createReceptionOperati" +
+            "onResponse")]
+        MiddlewareApp.ServiceReference1.createReceptionOperationResponse createReceptionOperation(MiddlewareApp.ServiceReference1.createReceptionOperationRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://facade.ejb_jee7.reception.dev.com/ReceptionEndPoint/receptionOperationRequ" +
-            "est", ReplyAction="http://facade.ejb_jee7.reception.dev.com/ReceptionEndPoint/receptionOperationResp" +
-            "onse")]
-        System.Threading.Tasks.Task<MiddlewareApp.ServiceReference1.receptionOperationResponse1> receptionOperationAsync(MiddlewareApp.ServiceReference1.receptionOperationRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://facade.ejb_jee7.reception.dev.com/ReceptionEndPoint/createReceptionOperati" +
+            "onRequest", ReplyAction="http://facade.ejb_jee7.reception.dev.com/ReceptionEndPoint/createReceptionOperati" +
+            "onResponse")]
+        System.Threading.Tasks.Task<MiddlewareApp.ServiceReference1.createReceptionOperationResponse> createReceptionOperationAsync(MiddlewareApp.ServiceReference1.createReceptionOperationRequest request);
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://facade.ejb_jee7.reception.dev.com/")]
-    public partial class messageSOAPModel : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class createReceptionOperationRequest {
         
-        private string appVersionField;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="createReceptionOperation", Namespace="http://facade.ejb_jee7.reception.dev.com/", Order=0)]
+        public MiddlewareApp.ServiceReference1.createReceptionOperationRequestBody Body;
         
-        private object[] dataField;
-        
-        private string infoField;
-        
-        private string operationNameField;
-        
-        private string operationVersionField;
-        
-        private bool statusOpField;
-        
-        private bool statusOpFieldSpecified;
-        
-        private string tokenAppField;
-        
-        private string tokenUserField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string appVersion {
-            get {
-                return this.appVersionField;
-            }
-            set {
-                this.appVersionField = value;
-                this.RaisePropertyChanged("appVersion");
-            }
+        public createReceptionOperationRequest() {
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("data", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public object[] data {
-            get {
-                return this.dataField;
-            }
-            set {
-                this.dataField = value;
-                this.RaisePropertyChanged("data");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string info {
-            get {
-                return this.infoField;
-            }
-            set {
-                this.infoField = value;
-                this.RaisePropertyChanged("info");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string operationName {
-            get {
-                return this.operationNameField;
-            }
-            set {
-                this.operationNameField = value;
-                this.RaisePropertyChanged("operationName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string operationVersion {
-            get {
-                return this.operationVersionField;
-            }
-            set {
-                this.operationVersionField = value;
-                this.RaisePropertyChanged("operationVersion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public bool statusOp {
-            get {
-                return this.statusOpField;
-            }
-            set {
-                this.statusOpField = value;
-                this.RaisePropertyChanged("statusOp");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool statusOpSpecified {
-            get {
-                return this.statusOpFieldSpecified;
-            }
-            set {
-                this.statusOpFieldSpecified = value;
-                this.RaisePropertyChanged("statusOpSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string tokenApp {
-            get {
-                return this.tokenAppField;
-            }
-            set {
-                this.tokenAppField = value;
-                this.RaisePropertyChanged("tokenApp");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string tokenUser {
-            get {
-                return this.tokenUserField;
-            }
-            set {
-                this.tokenUserField = value;
-                this.RaisePropertyChanged("tokenUser");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://facade.ejb_jee7.reception.dev.com/")]
-    public partial class receptionOperationResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://facade.ejb_jee7.reception.dev.com/")]
-    public partial class receptionOperation : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private messageSOAPModel messageField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public messageSOAPModel message {
-            get {
-                return this.messageField;
-            }
-            set {
-                this.messageField = value;
-                this.RaisePropertyChanged("message");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
+        public createReceptionOperationRequest(MiddlewareApp.ServiceReference1.createReceptionOperationRequestBody Body) {
+            this.Body = Body;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="receptionOperation", WrapperNamespace="http://facade.ejb_jee7.reception.dev.com/", IsWrapped=true)]
-    public partial class receptionOperationRequest {
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class createReceptionOperationRequestBody {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://facade.ejb_jee7.reception.dev.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public MiddlewareApp.ServiceReference1.messageSOAPModel message;
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string decipheredText;
         
-        public receptionOperationRequest() {
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string usedKey;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string fileName;
+        
+        public createReceptionOperationRequestBody() {
         }
         
-        public receptionOperationRequest(MiddlewareApp.ServiceReference1.messageSOAPModel message) {
-            this.message = message;
+        public createReceptionOperationRequestBody(string decipheredText, string usedKey, string fileName) {
+            this.decipheredText = decipheredText;
+            this.usedKey = usedKey;
+            this.fileName = fileName;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="receptionOperationResponse", WrapperNamespace="http://facade.ejb_jee7.reception.dev.com/", IsWrapped=true)]
-    public partial class receptionOperationResponse1 {
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class createReceptionOperationResponse {
         
-        public receptionOperationResponse1() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="createReceptionOperationResponse", Namespace="http://facade.ejb_jee7.reception.dev.com/", Order=0)]
+        public MiddlewareApp.ServiceReference1.createReceptionOperationResponseBody Body;
+        
+        public createReceptionOperationResponse() {
+        }
+        
+        public createReceptionOperationResponse(MiddlewareApp.ServiceReference1.createReceptionOperationResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class createReceptionOperationResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool acceptedReception;
+        
+        public createReceptionOperationResponseBody() {
+        }
+        
+        public createReceptionOperationResponseBody(bool acceptedReception) {
+            this.acceptedReception = acceptedReception;
         }
     }
     
@@ -280,25 +131,32 @@ namespace MiddlewareApp.ServiceReference1 {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MiddlewareApp.ServiceReference1.receptionOperationResponse1 MiddlewareApp.ServiceReference1.ReceptionEndPoint.receptionOperation(MiddlewareApp.ServiceReference1.receptionOperationRequest request) {
-            return base.Channel.receptionOperation(request);
+        MiddlewareApp.ServiceReference1.createReceptionOperationResponse MiddlewareApp.ServiceReference1.ReceptionEndPoint.createReceptionOperation(MiddlewareApp.ServiceReference1.createReceptionOperationRequest request) {
+            return base.Channel.createReceptionOperation(request);
         }
         
-        public void receptionOperation(MiddlewareApp.ServiceReference1.messageSOAPModel message) {
-            MiddlewareApp.ServiceReference1.receptionOperationRequest inValue = new MiddlewareApp.ServiceReference1.receptionOperationRequest();
-            inValue.message = message;
-            MiddlewareApp.ServiceReference1.receptionOperationResponse1 retVal = ((MiddlewareApp.ServiceReference1.ReceptionEndPoint)(this)).receptionOperation(inValue);
+        public bool createReceptionOperation(string decipheredText, string usedKey, string fileName) {
+            MiddlewareApp.ServiceReference1.createReceptionOperationRequest inValue = new MiddlewareApp.ServiceReference1.createReceptionOperationRequest();
+            inValue.Body = new MiddlewareApp.ServiceReference1.createReceptionOperationRequestBody();
+            inValue.Body.decipheredText = decipheredText;
+            inValue.Body.usedKey = usedKey;
+            inValue.Body.fileName = fileName;
+            MiddlewareApp.ServiceReference1.createReceptionOperationResponse retVal = ((MiddlewareApp.ServiceReference1.ReceptionEndPoint)(this)).createReceptionOperation(inValue);
+            return retVal.Body.acceptedReception;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<MiddlewareApp.ServiceReference1.receptionOperationResponse1> MiddlewareApp.ServiceReference1.ReceptionEndPoint.receptionOperationAsync(MiddlewareApp.ServiceReference1.receptionOperationRequest request) {
-            return base.Channel.receptionOperationAsync(request);
+        System.Threading.Tasks.Task<MiddlewareApp.ServiceReference1.createReceptionOperationResponse> MiddlewareApp.ServiceReference1.ReceptionEndPoint.createReceptionOperationAsync(MiddlewareApp.ServiceReference1.createReceptionOperationRequest request) {
+            return base.Channel.createReceptionOperationAsync(request);
         }
         
-        public System.Threading.Tasks.Task<MiddlewareApp.ServiceReference1.receptionOperationResponse1> receptionOperationAsync(MiddlewareApp.ServiceReference1.messageSOAPModel message) {
-            MiddlewareApp.ServiceReference1.receptionOperationRequest inValue = new MiddlewareApp.ServiceReference1.receptionOperationRequest();
-            inValue.message = message;
-            return ((MiddlewareApp.ServiceReference1.ReceptionEndPoint)(this)).receptionOperationAsync(inValue);
+        public System.Threading.Tasks.Task<MiddlewareApp.ServiceReference1.createReceptionOperationResponse> createReceptionOperationAsync(string decipheredText, string usedKey, string fileName) {
+            MiddlewareApp.ServiceReference1.createReceptionOperationRequest inValue = new MiddlewareApp.ServiceReference1.createReceptionOperationRequest();
+            inValue.Body = new MiddlewareApp.ServiceReference1.createReceptionOperationRequestBody();
+            inValue.Body.decipheredText = decipheredText;
+            inValue.Body.usedKey = usedKey;
+            inValue.Body.fileName = fileName;
+            return ((MiddlewareApp.ServiceReference1.ReceptionEndPoint)(this)).createReceptionOperationAsync(inValue);
         }
     }
 }

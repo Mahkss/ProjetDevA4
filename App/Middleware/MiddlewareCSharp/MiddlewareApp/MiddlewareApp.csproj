@@ -83,7 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\ServiceReference1\MiddlewareApp.ServiceReference1.receptionOperationResponse1.datasource">
+    <None Include="Connected Services\ServiceReference1\MiddlewareApp.ServiceReference1.createReceptionOperationResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceReference1\receptionService.wsdl" />
